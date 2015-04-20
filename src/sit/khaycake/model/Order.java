@@ -17,7 +17,7 @@ import sit.khaycake.database.ORM;
  *
  * @author -milk
  */
-public class Order {
+public class Order implements ORM{
     
     private int orderId;
     private Date orderDate;

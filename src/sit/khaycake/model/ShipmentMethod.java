@@ -16,7 +16,7 @@ import sit.khaycake.database.ORM;
  *
  * @author -milk
  */
-public class ShipmentMethod {
+public class ShipmentMethod implements ORM {
     private int id;
     private String name;
     private double price;

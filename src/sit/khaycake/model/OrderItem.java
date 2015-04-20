@@ -16,7 +16,7 @@ import sit.khaycake.database.ORM;
  *
  * @author -milk
  */
-public class OrderItem {
+public class OrderItem implements ORM{
     
     private int oritId;
     private int prsaId;

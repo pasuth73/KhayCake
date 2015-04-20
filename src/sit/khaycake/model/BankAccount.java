@@ -17,7 +17,7 @@ import sit.khaycake.database.exception.ColumnValueMismatchException;
 /**
  * @author -milk
  */
-public class BankAccount {
+public class BankAccount implements ORM {
 
     public enum Type{
 
@@ -28,11 +28,17 @@ public class BankAccount {
         private int id;
         private String name;
 
-        Type(int id) throws Exception {
-            this.id = id;
-            BankAccountType bt = (BankAccountType)SQL.findById(BankAccountType.class,id);
-            this.name = (bt==null)?null:bt.getName();
+        Type(int id){
+            try {
+                this.id = id;
+                BankAccountType bt = (BankAccountType) SQL.findById(BankAccountType.class, id);
+                this.name = (bt == null) ? null : bt.getName();
+            }catch(Exception ex){
+                //แก้ไข จาก โยน Exception ออกไป เป็น try catch
+            }
         }
+
+
 
         public static Type getType(int id){
             switch (id)

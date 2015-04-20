@@ -12,6 +12,7 @@ import sit.khaycake.database.Column;
 import sit.khaycake.database.ORM;
 import sit.khaycake.database.SQL;
 
+
 /**
  *
  * @author -milk

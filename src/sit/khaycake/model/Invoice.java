@@ -18,7 +18,7 @@ import sit.khaycake.database.SQL;
 /**
  * @author -milk
  */
-public class Invoice {
+public class Invoice implements ORM {
 
     private int id;
     private Date date;
